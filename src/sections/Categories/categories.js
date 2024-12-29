@@ -21,7 +21,7 @@ function Categories() {
 
   return (
     <>
-      <section className={classes.categories}>
+      <section className={classes.categories} id='categories'>
         <div className={classes.container}>
           <h2 className={classes.title}>Explore Categories</h2>
           <div className={classes.cardsContainer}>

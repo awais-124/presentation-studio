@@ -3,7 +3,7 @@ import classes from './nav.module.css';
 
 import { navLinks } from '../../helpers/constants';
 
-function Nav() {
+function Nav({ signout }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -25,6 +25,9 @@ function Nav() {
           </li>
         ))}
       </ul>
+      <button onClick={signout} className={classes.logout}>
+        LOGOUT
+      </button>
       <div className={classes.hamburger} onClick={toggleMenu}>
         <span></span>
         <span></span>

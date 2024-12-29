@@ -7,7 +7,7 @@ import LOGO from '../../assets/logos/4.png';
 
 function Footer() {
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} id='contact'>
       <div className={classes.container}>
         <img src={LOGO} alt='logo' className={classes.footerLogo} />
         <div className={classes.footerSections}>
@@ -56,7 +56,8 @@ function Footer() {
       {/* Copyright Section */}
       <div className={classes.copyright}>
         <p>
-          &copy; {new Date().getFullYear()} Company Name. All rights reserved.
+          &copy; {new Date().getFullYear()} PresentationStudio. All rights
+          reserved.
         </p>
       </div>
     </footer>

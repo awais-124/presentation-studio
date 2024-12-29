@@ -12,12 +12,9 @@ import {
 const navLinks = [
   { id: 'hero', label: 'Home' },
   { id: 'features', label: 'Features' },
-  { id: 'popular-slides', label: 'Popular Slides' },
   { id: 'categories', label: 'Categories' },
   { id: 'pricing', label: 'Pricing' },
-  { id: 'working', label: 'How It Works' },
-  { id: 'testimonial', label: 'Testimonials' },
-  { id: 'faqs', label: 'FAQs' },
+  { id: 'testimonials', label: 'Testimonials' },
   { id: 'contact', label: 'Contact' },
 ];
 

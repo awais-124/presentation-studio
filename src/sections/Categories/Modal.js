@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Modal.module.css';
+import { slidesLinks } from '../../helpers/constants';
 
 const pptLinks = [
   'https://docs.google.com/presentation/d/1QhjkDJ94TBjQhB1vS5Gyr5uE9RUSWWKE/edit?usp=drive_link',
@@ -28,6 +29,14 @@ const downloadLinks = [
 ];
 
 function Modal({ category, closeModal }) {
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
   return (
     <div className={classes.modalOverlay} onClick={closeModal}>
       <div
@@ -39,17 +48,18 @@ function Modal({ category, closeModal }) {
           Slides for {category.name}. Explore now!
         </p>
         <div className={classes.slidesContainer}>
-          {pptLinks.map((link, index) => (
-            <div className={classes.slideCard} key={index}>
+          {slidesLinks[category.name]?.map((item) => (
+            <div className={classes.slideCard} key={item.id}>
               <div
                 className={classes.thumbnail}
-                onClick={() => window.open(link, '_blank')}
+                style={{ backgroundColor: getRandomColor() }}
+                onClick={() => window.open(item.link, '_blank')}
               >
-                Slide {index + 1}
+                {item.title}
               </div>
-              <p className={classes.title}>Title {index + 1}</p>
+              <p className={classes.title}>{item.title}</p>
               <a
-                href={downloadLinks[index]}
+                href={item.download_link}
                 className={classes.downloadButton}
                 download
               >

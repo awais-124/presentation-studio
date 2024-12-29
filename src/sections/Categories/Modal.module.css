@@ -72,8 +72,10 @@
 .thumbnail {
   background: #007bff;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 400;
   display: flex;
+  text-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 100px;

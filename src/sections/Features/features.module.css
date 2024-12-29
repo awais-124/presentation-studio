@@ -1,0 +1,58 @@
+.featuresSection {
+  width: 100%; /* Full width for the background color */
+  background-color: #f7fbfc; /* Light background for the entire section */
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center; /* Center the content */
+}
+
+.featuresContent {
+  width: 80%; /* Restrict content width to 80% of the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b2e4a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center; /* Center the cards within the 80% width */
+}
+
+.card {
+  background-color: #d6e6f2;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 250px; /* Minimum size of 250px, flexible width */
+  max-width: 300px; /* Maximum width for consistent card sizes */
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2b2e4a;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #53354a;
+  line-height: 1.6;
+}

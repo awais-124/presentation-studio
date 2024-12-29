@@ -1,0 +1,42 @@
+/* SplashScreen.module.css */
+.splashContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Dark background */
+  color: #ffffff; /* Light text */
+  z-index: 1000;
+}
+
+.logo {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.heading {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: cursive;
+}
+
+.getStartedButton {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.getStartedButton:hover {
+  background-color: #999;
+  color: #000;
+}

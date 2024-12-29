@@ -6,12 +6,20 @@ import WebPage from './components/WebPage/WebPage';
 import AuthenticationLoader from './components/Loaders/AuthenticationLoader';
 
 import { auth, db, signOut, getDoc, setDoc, doc } from './firebase-config';
+import SplashScreen from './components/Splash/SplashScreen';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isRegistered, setIsRegistered] = useState(false); // Track registration
+  const [isRegistered, setIsRegistered] = useState(false);
   const [user, setUser] = useState(null);
   const [authChecked, setAuthChecked] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSplash(false);
+    }, 5000);
+  });
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
@@ -52,15 +60,21 @@ function App() {
 
   return (
     <div className='App'>
-      {!authChecked ? (
-        <AuthenticationLoader />
-      ) : isLoggedIn && !isRegistered ? (
-        <WebPage user={user} onLogout={handleLogout} />
+      {showSplash ? (
+        <SplashScreen hide={() => setShowSplash(false)} />
       ) : (
-        <Form
-          onLogin={() => setIsLoggedIn(true)}
-          onRegisterComplete={() => setIsRegistered(true)}
-        />
+        <>
+          {!authChecked ? (
+            <AuthenticationLoader />
+          ) : isLoggedIn && !isRegistered ? (
+            <WebPage user={user} onLogout={handleLogout} />
+          ) : (
+            <Form
+              onLogin={() => setIsLoggedIn(true)}
+              onRegisterComplete={() => setIsRegistered(true)}
+            />
+          )}
+        </>
       )}
     </div>
   );

@@ -6,8 +6,8 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #000; /* Dark background */
-  color: #ffffff; /* Light text */
+  background-color: #FDF7F4; /* Dark background */
+  color: #000; /* Light text */
   z-index: 1000;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .heading {
-    color: #fff;
+    color: #000;
     font-size: 2rem;
     font-weight: bolder;
     text-transform: uppercase;

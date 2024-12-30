@@ -1,35 +1,28 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
   background-color: #2B2E4A;
   color: #F7FBFC;
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.width {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  align-items: center;
-  padding: 1rem 2rem;
 }
 
 .logout {
-    background-color: #E84545;
-    color: #fff;
+  background-color: #E84545;
+  color: #ddd;
 }
 
-.logout:hover{
-    background-color: #e92929;
-    color: #eee;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E84545;
 }
 
-.logo img{
-  width: 130px;
-  height: 100px;
+.logo span {
+  color: #B9D7EA;
 }
 
 .navLinks {
@@ -87,20 +80,15 @@
     text-align: center;
   }
 
-  .logout {
-    margin-top: 20px;
-  }
-
   .navLinks {
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 1rem;
   }
 
-  .width {
-    flex-direction: column;
-    width: 100%;
-    }
+  .logout {
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -126,10 +114,4 @@
   .hamburger {
     display: flex;
   }
-   .width {
-    justify-content: flex-end;
-    gap: 30px;
-    flex-direction: row;
-    width: 100%;
-    }
 }

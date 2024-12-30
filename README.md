@@ -1,4 +1,4 @@
-# PresenatationStudio - A React Application
+# PresentationStudio - A Single Page React Application
 
 ### Selling presentation slides online
 

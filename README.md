@@ -2,7 +2,7 @@
 
 ### Selling presentation slides online
 
-![WEBSITE-IMAGE](https://github.com/awais-124/presentation-studio.git/public/readme-image.jpg)
+![WEBSITE-IMAGE](https://github.com/awais-124/presentation-studio/blob/main/public/readme-image.jpg)
 
 > Get Started:
 - clone the repo `git clone https://github.com/awais-124/presentation-studio.git`
